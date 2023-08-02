@@ -1,10 +1,16 @@
+.head-title{
+    font-size: 48px;
+}
 .search-bar-container {
     display: flex;
     align-items: center;
-    border: 1px solid lightgreen;
+    border: 1px solid rgb(3, 130, 240);
     border-radius: 20px;
     padding: 5px;
     background-color: #f1f1f1;
+    max-width: 600px;
+    width: 100%;
+    margin:  40px auto;
   }
   
   .search-bar-input {
@@ -16,11 +22,14 @@
   }
   
   .search-button {
-    background-color: lightgreen;
+    background-color: rgb(2, 151, 188);
     border: none;
     outline: none;
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
+    margin-left: 10px;
+    color: #fff;
+    letter-spacing: 0.8px;
   }
   

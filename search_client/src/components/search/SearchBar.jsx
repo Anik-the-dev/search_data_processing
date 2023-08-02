@@ -20,18 +20,22 @@ console.log(query);
   };
 
   return (
+    <>
+    <h1 className='head-title'>Custom Search Bar</h1>
     <div className="search-bar-container">
       <input
         type="text"
         value={query}
         onChange={handleInputChange}
-        onKeyPress={handleKeyPress}
+        // onKeyPress={handleKeyPress}
         className="search-bar-input"
       />
       <button className="search-button" onClick={handleSearch}>
         Search
       </button>
     </div>
+    </>
+
   );
 };
 
