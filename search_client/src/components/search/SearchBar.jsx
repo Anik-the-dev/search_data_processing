@@ -9,7 +9,6 @@ console.log(query);
   };
 
   const handleSearch = () => {
-    // Handle search logic here, for now, let's just print the query
     console.log('Search Query:', query);
   };
 
@@ -21,7 +20,7 @@ console.log(query);
 
   return (
     <div className='main-container'>
-    <h1 className='head-title'>Custom Search Bar</h1>
+    <h1 className='head-title'><span>Custom</span> Search Bar</h1>
     <div className="search-bar-container">
       <input
         type="text"

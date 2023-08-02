@@ -2,7 +2,11 @@
     margin: 10px 50px;
 }
 .head-title{
-    font-size: 48px;
+    font-size: 72px;
+    color: rgb(0, 123, 154);;
+}
+.head-title span{
+    color: rgb(0, 123, 188);;
 }
 .search-bar-container {
     display: flex;
