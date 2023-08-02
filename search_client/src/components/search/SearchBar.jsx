@@ -20,21 +20,21 @@ console.log(query);
   };
 
   return (
-    <>
+    <div className='main-container'>
     <h1 className='head-title'>Custom Search Bar</h1>
     <div className="search-bar-container">
       <input
         type="text"
         value={query}
         onChange={handleInputChange}
-        // onKeyPress={handleKeyPress}
+        onKeyDown ={handleKeyPress}
         className="search-bar-input"
       />
       <button className="search-button" onClick={handleSearch}>
         Search
       </button>
     </div>
-    </>
+    </div>
 
   );
 };
