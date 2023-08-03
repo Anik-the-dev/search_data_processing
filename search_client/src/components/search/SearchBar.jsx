@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './SearchBar.css';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
   const [googleLink, setGoogleLink] = useState([]);
+  const [loading, setLoading] = useState(false);
 console.log(googleLink);
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
   const handleSearch = async (e,startIndex) => {
-    console.log('Search Query:', query);
-    console.log('Search Query:', startIndex);
     try {
       const encodedQuery = encodeURIComponent(query);
       const cxId = '47f01da3cd66d4903'; 
@@ -38,12 +37,20 @@ console.log(googleLink);
   const fetchedHundread = (e) =>{
     let startIndex = 0
     setGoogleLink([])
+    setLoading(true)
+    console.log(loading);
     for(let i=0; i < 2; i++) {
       handleSearch(e,startIndex)
       startIndex+=10;
-      console.log("inside", startIndex);
     }
+    console.log(loading);
   }
+
+  useEffect(() => {
+    console.log("Loading state changed:", loading);
+    setLoading(false);
+  }, [loading]);
+
   return (
     <div className='main-container'>
     <h1 className='head-title'><span>Custom</span> Search Bar</h1>
@@ -59,6 +66,7 @@ console.log(googleLink);
         Search
       </button>
     </div>
+    {loading? '<p>Loading...</p>': null}
     </div>
 
   );
